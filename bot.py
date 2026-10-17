@@ -112,11 +112,11 @@ async def statistics(message: Message):
     text = f'Сегодня выпито {water} мл.\n'
     if water == 0:
         text = f'{text}Ну выпей хоть стаканчик😢'
-    elif 250 <= water <= 1000:
+    elif 0 < water < 1000:
         text = f'{text}Давай попьём ещё водички😊'
-    elif 1000 < water < 1750:
+    elif 1000 <= water < 1750:
         text = f'{text}Более половины суточной нормы уже выпита🤗'
-    elif water >= 1750:
+    elif 1750 <= water < 2000:
         text = f'{text}Последний стакан и норма будет сделана👍'
     elif water == 2000:
         text = f'{text}Суточная норма потреблена ровно!👌'
